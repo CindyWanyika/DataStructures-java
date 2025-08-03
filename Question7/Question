@@ -1,0 +1,42 @@
+Ashesi University’s Research Office needs to process batches of grant proposals and rank them
+by PriorityScore (higher score means higher priority). Each proposal record consists of
+ProposalID, Title, PriorityScore, and InvestigatorName.
+You must implement both Insertion Sort and Selection Sort in Java to sort an array of these
+records in descending order of PriorityScore. If two proposals share the same PriorityScore, order
+them alphabetically by Title. You will then compare the two algorithms by counting their key
+operations.
+Input Format:
+Number of records: n
+       (1 ≤ n ≤ 10000)
+ProposalID₁ Title₁ PriorityScore₁ InvestigatorName₁
+ProposalID₂ Title₂ PriorityScore₂ InvestigatorName₂
+…
+ProposalIDₙ Titleₙ PriorityScoreₙ InvestigatorNameₙ
+Output Format: Your program should run both sorts on the same input and print, for each
+algorithm, two things in this order: The sorted list (one record per line, same four-field format),
+and a metrics line
+InsertionSort → Comparisons: c₁, Shifts: s₁
+SelectionSort → Comparisons: c₂, Swaps: s₂
+Requirements:
+1. Implement your own sorting methods—do not call Java library sort routines.
+2. Insertion Sort must be stable and you must count comparisons between PriorityScore
+or Title, Shifts (each time an element is moved to make room)
+3. Selection Sort need not be stable; count: comparisons between PriorityScore or Title,
+swaps (each time two elements exchange places)
+4. In your main class, read the input once, then clone the array for each sort so they
+operate on identical data.
+Deliverables:
+1. Solution design showing the skeleton with ProposalRecord, SortingApp, and method
+signatures for insertionSort() and selectionSort() plus counters for comparisons and
+shifts/swaps.
+2. Source code in Java implementing ProposalRecord with appropriate fields and compare
+logic insertionSort() and selectionSort() that return sorted lists and expose metrics.
+3. A main class that reads input, runs both sorts, and prints the sorted lists, followed by
+the two metrics lines.
+4. Be prepared to discuss orally why Insertion Sort is stable and Selection Sort is not, Best,
+average, and worst-case behaviors, and when one might outperform the other, and how
+the counted Shifts vs. Swaps reflect each algorithm’s data movement.
+5. At least two test cases (each with n ≥ 5) showing: the complete input block, the full
+expected output (sorted lists + metrics lines) for both sorts, the actual output, and a
+brief note comparing c₁ vs. c₂ and s₁ vs. s₂ like which of the two sorts did fewer shifts
+when data is nearly sorted.

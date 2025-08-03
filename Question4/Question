@@ -1,0 +1,46 @@
+You are building a command-line calculator that reads arithmetic expressions in infix notation,
+converts them to postfix (Reverse Polish) form, and then evaluates them. Each expression may
+contain:
+• Integer operands (positive, multi-digit)
+• Operators: +, -, *, /, ^
+• Parentheses: ( and )
+You must implement a Stack data structure in Java using an underlying array to:
+1. Convert a given infix expression string to its corresponding postfix notation.
+2. Evaluate the resulting postfix expression to compute the integer result.
+Input Format: An infix expression that may include spaces between tokens.
+Infix: <infix expression>
+Output Format: Print exactly two lines
+Postfix: <postfix expression>
+Result: <evaluation result>
+Requirements:
+1. Implement your own Stack<T> class—do not use java.util.Stack or other library
+stack classes.
+2. Use one stack instance for operators during conversion, and a separate stack for
+operands during evaluation.
+3. Conversion must correctly handle operator precedence (^ highest, then * and /, then +
+and -) and associativity (left for +,-,*,/; right for ^)
+4. Include code to count and print the total number of push and pop operations performed
+across both conversion and evaluation phases.
+Deliverables:
+1. Program design: a class skeleton for
+o Stack<T> with push, pop, peek, and counter fields
+o ExpressionEvaluator
+with
+infixToPostfix(String)
+evaluatePostfix(String) methods
+2. Source code in Java implementing:
+o Your array-based Stack<T>
+o Conversion and evaluation routines
+o A global or returned push/pop counter
+and
+o A main class that reads input, processes each expression, and prints the two
+required lines.
+3. Be prepared to discuss orally why a stack is the appropriate ADT for both conversion and
+evaluation, how your algorithm enforces operator precedence and associativity, ime and
+space complexity trade-offs
+4. Test cases: At least two, each showing:
+o The input block
+o The expected “Postfix:” line
+o The expected “Result:” line
+o The actual output
+o The total push/pop operations printed by your program.

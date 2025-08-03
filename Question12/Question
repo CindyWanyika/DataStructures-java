@@ -1,0 +1,48 @@
+Exam Question 12: (Graph Traversal – Campus Navigation)
+Ashesi University’s campus navigation system models the campus as an undirected graph,
+where each building is a vertex labeled from 1 to n, and each walkway is an undirected edge
+between two vertices. You must implement both Depth-First Search (DFS) and Breadth-First
+Search (BFS) in Java to answer user traversal queries.
+Input Format:
+n m   (1 ≤ n ≤ 1000): number of buildings (vertices), labeled 1…n
+(0 ≤ m ≤ n(n–1)/2): number of walkways (edges)
+u₁ v₁
+u₂ v₂
+…
+uₘ vₘ
+q
+QUERY₁
+QUERY₂
+…
+(1 ≤ q ≤ 1000): number of traversal queries
+QUERY_q
+Each QUERYᵢ is either
+DFS s
+or
+BFS s
+where s (1 ≤ s ≤ n) is the starting building
+Output Format: For each query print a single line listing vertices in the order they are first
+visited.
+DFS from s: v₁ v₂ v₃ … vₖ
+or
+BFS from s: v₁ v₂ v₃ … vₖ
+Requirements:
+1. Represent the graph with an adjacency list—do not use Java’s built-in graph or matrix
+classes.
+2. Implement two methods without library traversal routines: dfs()- recursive Depth-First
+Search and bfs()- queue-based Breadth-First Search that prints visit order.
+3. Visit neighbors in ascending vertex order.
+4. Within each traversal, count and print after the visit line the nodes visited (should be
+number of reachable vertices) and edges examined (each time you inspect an
+adjacency list entry)
+Deliverables:
+1. Solution design/plan: a Graph class skeleton showing the required method signatures.
+2. Java code that reads n, m, builds an adjacency list from the next m edges, reads q,
+loops over queries, and for each calls dfs() or bfs(), prints the traversal line and then the
+counts of nodes visited and edges examined.
+3. Be prepared to discuss orally how DFS and BFS differ in exploration order, use cases
+(e.g., connectivity vs. shortest paths in unweighted graphs), the effect of adjacency-list
+ordering on traversal output.
+4. Provide at least two full test case examples (each with n ≥ 5, m ≥ 4, q ≥ 2) showing the
+complete input block, the exact expected traversal outputs, and counts after each
+query.

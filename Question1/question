@@ -1,0 +1,42 @@
+Ashesi University’s library system needs to maintain a dynamic collection of book records,
+allowing insertion, deletion, and retrieval by index. Each record consists of: BookID, Title, Author,
+and Availability status.
+You must implement a List data structure in Java using an underlying array. Your list should
+support the following operations:
+ADD: append a record to the end
+INSERT: insert a record at a given index
+REMOVE: remove the record at a given index
+GET: retrieve (and print) the record at a given index
+SIZE: return the current number of records
+PRINT: display all records in order
+Your array must dynamically resize (doubling capacity when full)
+
+
+Input Format:
+ADD BookID Title Author Availability
+INSERT index BookID Title Author Availability
+REMOVE index
+SIZE
+GET index
+PRINT
+Output Format (for each GET and PRINT operation, one record per line):
+GET index
+BookID Title Author AvailabilityStatus
+PRINT
+BookID1 Title1 Author1 AvailabilityStatus1
+...
+BookIDn Titlen Authorn AvailabilityStatusn
+Requirements:
+1. Implement your own array-based List class—do not use java.util.ArrayList or
+other library list classes.
+2. Dynamically resize the underlying array by doubling its capacity whenever it becomes
+full.
+3. Include code to count and print the number of times the array is resized.
+Deliverables:
+1. Solution design: a skeleton showing your classes and their key methods.
+2. Java Source code defining your BookList with all required operations.
+3. Be prepared to answer/discuss orally about how dynamic resizing works and the time
+complexity related to it, as well as the comparison with a linked-list implementation.
+4. At least two test cases (each with at least five records) showing the sequence of input
+operations, the expected output for the GET and PRINT commands, the actual output,
+and the total resize count printed by your program.

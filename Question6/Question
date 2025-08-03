@@ -1,0 +1,44 @@
+Ashesi University’s Alumni Relations Office needs to handle lookup queries for graduate records.
+Each record consists of: StudentID, Name, Major, and GraduationYear.
+You must implement both an iterative and a recursive version of Binary Search in Java to locate
+records for given StudentIDs, then compare their behavior..
+Input Format:
+Number of records: n
+       (1 ≤ n ≤ 100000)
+StudentID₁ Name₁ Major₁ GraduationYear₁
+StudentID₂ Name₂ Major₂ GraduationYear₂
+…
+StudentIDₙ Nameₙ Majorₙ GraduationYearₙ
+Number of queries: q
+QueryID₁
+QueryID₂
+…
+QueryIDq
+       (1 ≤ q ≤ 10000)
+Output Format (For each QueryIDᵢ, your program should run both iterative and recursive
+versions of the searches indicating whether found or not):
+Iterative → Found: StudentID Name Major GraduationYear (Comparisons: c₁)
+Recursive → Found: StudentID Name Major GraduationYear (Comparisons: c₂)
+Iterative → Not Found: QueryID (Comparisons: c₁)
+Recursive → Not Found: QueryID (Comparisons: c₂)
+Requirements:
+1) Implement the two methods binarySearchIterative() and
+binarySearchRecursive() without using Java library search routines:
+2) Each method must count and return the number of key comparisons performed.
+3) In your main class, for each query, invoke both versions, capture their comparison
+counts, and print results in the specified format.
+Deliverables:
+1) Solution design showing the skeleton of the classes for AlumniRecord and
+BinarySearchApp with method signatures for both searches and comparison
+counters.
+2) Source code in Java defining the AlumniRecord data structure,
+binarySearchIterative() and binarySearchRecursive() methods, each
+returning an object or tuple containing the found‐index (or –1) and comparison count, a
+main class that reads the input, runs both searches per query, and prints all required
+lines.
+3) Be prepared to discuss orally the differences in space usage (recursive vs iterative), any
+practical performance or implementation considerations comparing both versions of
+the search, and when you might prefer one version over the other in practice.
+4) At least two test cases (with n ≥ 5 and q ≥ 3), each showing the complete input block,
+the expected four output lines per query, and a brief commentary on the observed
+comparison counts, like which version recorded more counts and why

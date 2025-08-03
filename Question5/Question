@@ -1,0 +1,46 @@
+Ashesi University’s Akorno cafeteria needs to handle incoming meal orders in the exact
+sequence they arrive so that no one’s order is skipped or served out of turn. Each order record
+consists of OrderID, CustomerID (Staff/Student), MealName, Timestamp (in “HH:MM” 24-hour
+format).
+You must implement a circular queue in Java using an array. Your queue should support these
+operations:
+• ENQUEUE: add an order to the back of the queue
+• DEQUEUE: remove the order at the front of the queue and print it
+• PEEK: retrieve (and print) the order at the front without removing it
+• SIZE: return the current number of orders
+• PRINT: display all orders from front to back
+When the queue is full, double its capacity (preserving the circular order).
+Input Format:
+ENQUEUE OrderID StudentID MealName Timestamp
+DEQUEUE
+PEEK
+SIZE
+PRINT
+Output Format:
+DEQUEUE
+Dequeued: OrderID StudentID MealName Timestamp
+PEEK
+Front: OrderID StudentID MealName Timestamp
+SIZE
+Size: k
+PRINT
+OrderID1 StudentID1 MealName1 Timestamp1
+...
+OrderIDn StudentIDn MealNamen Timestampn
+Requirements:
+1. Implement your own CircularQueue<T> class—do not use java.util.Queue or other
+library queue classes.
+2. Use a circular array; when full, double the array’s capacity and re-index elements
+correctly.
+3. Include code to count and print the number of times the array is resized.
+Deliverables:
+1. Solution design: a skeleton of the CircularQueue<T> and OrderRecord classes with
+method signatures and fields.
+2. Source code in Java implementing your circular queue, including the resize counter and
+a main class that reads input and executes commands.
+3. Be prepared to discuss orally why a circular buffer is ideal for a FIFO queue, how
+dynamic resizing affects performance and memory, trade-offs versus a linked-list
+queue implementation.
+4. At least two (each with at least five records) showing the sequence of input operations,
+he expected output for DEQUEUE, PEEK, SIZE, and PRINT, the actual output, and the
+total resize count printed by your program.

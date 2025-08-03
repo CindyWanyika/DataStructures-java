@@ -1,0 +1,49 @@
+You are implementing a media player to manage dynamic playlists that allow users to traverse
+video songs forwards and backwards. Each song record consists of: SongID, Title, Artist, and
+Duration (in seconds).
+You must implement a Doubly Linked List in Java to store and manage these records, supporting
+bidirectional traversal and modifications. Your list should support the following operations:
+ADD_FIRST: add a song to the front of the list
+ADD_LAST: add a song to the front of the list
+ADD_AFTER: insert a song after the given song
+REMOVE: remove the song for a given SongID
+FIND: retrieve (and print) the record for a given SongD
+DISPLAY_FORWARD: print all songs with details in their actual order
+DISPLAY_BACKWARD: print all songs with details in the reverse order
+Input Format:
+ADD_FIRST SongID Title Artist Duration
+ADD_LAST  SongID Title Artist Duration
+ADD_AFTER existingSongID SongID Title Artist Duration
+REMOVE    SongID
+FIND
+SongID
+DISPLAY_FORWARD
+DISPLAY_BACKWARD
+Output Format (for each REMOVE, FIND, DISPLAY_FORWARD, and DISPLAY_BACKWARD):
+REMOVE SongID
+Removed SongID.
+FIND SongID
+SongID Title Artist Duration
+DISPLAY_FORWARD
+SongID1 Title1 Artist1 Duration1
+...
+SongIDn Titlen Artistn Durationn
+DISPLAY_BACKWARD
+SongIDn Titlen Artistn Durationn
+...
+SongID1 Title1 Artist1 Duration1
+Requirements:
+1) Implement your own Doubly Linked List class—do not use java.util.LinkedList or other
+library list classes.
+2) Include code to count and print the total number of pointer updates (next and prev
+assignments) performed across all operations.
+Deliverables:
+1) Your solution/program design, i.e., a skeleton of the classes and the methods therein.
+2) Source code in Java defining your doubly linked list implementation, including the
+pointer-update counter and a main method to process commands.
+3) Be prepared to answer/discuss orally about why doubly linked lists are suitable for
+bidirectional traversal, comparison versus singly linked lists and array-based lists, and
+how pointer updates maintain list integrity.
+4) At least two test cases (with at least five songs) showing the sequence of input operations,
+the expected output for the REMOVE, FIND, DISPLAY_FORWARD, and
+DISPLAY_BACKWARD commands, the actual output, and the total pointer-update count.

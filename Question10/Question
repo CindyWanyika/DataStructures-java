@@ -1,0 +1,46 @@
+Ashesi University’s student information system needs to support high-speed insertion, lookup,
+and deletion of student records by StudentID. Each record consists of StudentID, Name, and
+Email.
+You must implement a HashTable in Java using separate chaining (each bucket is a linked list).
+Your table should dynamically resize (rehash) by doubling its capacity whenever the load factor
+(size/capacity) exceeds 0.75.
+Input Format:
+PUT    StudentID Name Email
+GET    StudentID
+REMOVE StudentID
+SIZE
+DISPLAY
+Output Format:
+For PUT, print nothing, For GET, print either:
+Found: StudentID Name Email
+or
+Not Found: StudentID
+For REMOVE, print either:
+Removed: StudentID
+or
+Not Found: StudentID
+For SIZE, print:
+Size: k
+For DISPLAY, print all stored records, one per line, in arbitrary order:
+StudentID Name Email
+Requirements:
+1. Implement your own generic HashTable<K,V> class—do not use Java library classes.
+2. Use an array of buckets, each bucket holds a linked list of nodes (Node<K,V>), and a hash
+function based on key.hashCode().
+3. Maintain an initial capacity of 16 and rehash (double capacity) whenever load factor >
+0.75, re-inserting all existing entries.
+4. Include code to count and print at the end of the run: Collision count (every time you
+insert into a non-empty bucket), Rehash count (number of times you doubled and
+rehashed)
+Deliverables:
+1. Solution design: a skeleton of your classes with fields and methods therein.
+2. Source code in Java implementing your HashTable<Integer, StudentRecord> with
+separate chaining, rehash logic, and counters, a main class that reads the input
+operations and prints outputs as specified, and at program end, print the number of
+collisions and rehashes.
+3. Be prepared to discuss orally how your hash function and hashCode() usage distribute
+keys, trade-offs of separate chaining vs. open addressing, and how load factor thresholds
+affect space/time performance
+4. At least two test cases (each with m ≥ 5) showing the full sequence of input operations,
+the expected output for each GET/REMOVE/SIZE/DISPLAY, actual output, and the final
+printed collision and rehash counts.

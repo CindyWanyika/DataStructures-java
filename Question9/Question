@@ -1,0 +1,31 @@
+A bookstore needs to sort its inventory by Price so that the most affordable textbooks are listed
+first. Each record consists of: BookID, Title, Author, and Price.
+You must implement Quick Sort in Java to sort an array of these records in ascending order of
+Price. If two books have the same Price, order them alphabetically by Title. Your implementation
+must be in-place and count its key operations.
+Input Format:
+Number of records: n         (1 ≤ n ≤ 100000)
+BookID₁ Title₁ Author₁ Price₁
+BookID₂ Title₂ Author₂ Price₂
+…
+BookIDₙ Titleₙ Authorₙ Priceₙ
+Output Format:
+Print the sorted list, one record per line, in the same four-field format:
+BookID Title Author Price
+Requirements:
+1. Implement your own quickSort()—do not use library sort routines.
+2. Use an in-place partitioning scheme with the last element as the pivot.
+3. The Comparisons are between Price (and Title when Prices are equal) and count the
+Swaps of two records (e.g., swapping the pivot into place, or exchanging an out-of-order
+element during partitioning).
+Deliverables:
+1. Solution design: a skeleton showing the classes, fields, and method signatures therein.
+2. Source code in Java implementing BookRecord with appropriate fields and a comparator
+for ties, in-place quickSort and partition methods that update counters, a main class that
+reads input, calls quickSort, and then prints the sorted array, followed by the comparison
+and swap counts.
+3. Be prepared to answer/discuss orally Quick Sort’s average-case and worst-case time
+complexities, how pivot choice and input order affect performance, trade-offs between
+in-place Quick Sort and Merge Sort (e.g., space usage)
+4. At least two test cases (each with n ≥ 5) showing the complete input block, the expected
+sorted output, and the printed comparison and swap counts.

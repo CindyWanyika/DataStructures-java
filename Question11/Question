@@ -1,0 +1,39 @@
+Ashesi University’s IT help desk needs to maintain a dynamic telephone directory for staff and
+students, supporting fast lookups, insertions, and deletions by Name. Each directory entry
+consists of Name, PhoneNumber.
+You must implement an unbalanced Binary Search Tree in Java, using Name as the key, to
+manage these entries.
+Input Format:
+INSERT  Name PhoneNumber
+DELETE  Name
+SEARCH  Name
+DISPLAY
+Output Format:
+For SEARCH, print either:
+Found: Name PhoneNumber
+or
+Not Found: Name
+For DELETE, print either:
+Deleted: Name
+or
+Not Found: Name
+For DISPLAY, print all entries in ascending alphabetical order of Name (in-order traversal), one
+per line:
+Name PhoneNumber
+Requirements:
+1. Implement your own classes—do not use any library tree or map classes.
+2. Do not perform any balancing; the tree may become skewed.
+3. Include code to count and print the total number of key comparisons (string
+comparisons) performed across all operations.
+Deliverables:
+1. Solution design/plan, which is a skeleton of your classes, showing fields and method
+signatures for various operations, as well as a comparison-counter field.
+2. Source code in Java implementing the planned classes and methods, a global
+comparison counter, and a main class that reads m operations, executes them, prints
+results immediately, and after all operations the total total comparisons.
+3. Be prepared to answer/discuss orally why an unbalanced BST may degrade to O(n) in
+the worst case, how in-order successor replacement works during deletion, trade-offs
+versus using a balanced tree (e.g., AVL) or a hash table.
+4. Provide at least two test cases (each with m ≥ 5), showing the full sequence of input
+operations, the exact expected output for each SEARCH, DELETE, and DISPLAY, the
+actual output, and the final “Total Comparisons” count.
